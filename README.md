@@ -25,7 +25,11 @@ copying files one by one.
 
 ## Run locally
 
-Install Node.js and the Tauri prerequisites for your operating system, then run:
+Windows users can download the 64-bit installer from the
+[latest GitHub release](https://github.com/brokeabbas/PromptPAD/releases/latest).
+
+To build from source, install Node.js and the Tauri prerequisites for your
+operating system, then run:
 
 ```bash
 npm install
@@ -46,6 +50,7 @@ customer data. SSH credentials should never be committed to this repository.
 
 ## Current status
 
-The core local and SSH workflows are implemented. Planned work includes breaking
-the main interface into smaller modules, automated tests, credential-storage
-hardening, CI, screenshots, and packaged releases.
+The core local and SSH workflows are implemented, covered by an initial unit
+test suite, built in CI, and available as a packaged Windows release. Planned
+work includes breaking the main interface into smaller modules and further
+credential-storage hardening.
