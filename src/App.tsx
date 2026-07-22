@@ -81,7 +81,7 @@ function stripImportSuffix(specifier: string): string {
   return specifier.split("?")[0]?.split("#")[0]?.trim() ?? specifier.trim();
 }
 
-function normalizeRelativePath(path: string): string {
+export function normalizeRelativePath(path: string): string {
   return path.replace(/\\/g, "/").replace(/^\.\//, "");
 }
 
@@ -123,7 +123,7 @@ function joinRelativePath(baseDirectory: string, importPath: string): string {
   return resolvedParts.join("/");
 }
 
-function getImportSpecifiers(content: string): string[] {
+export function getImportSpecifiers(content: string): string[] {
   const specifiers = new Set<string>();
 
   for (const regex of IMPORT_SPECIFIER_REGEXES) {
@@ -352,7 +352,7 @@ function createProjectId(rootPath: string): string {
   return `${getProjectName(rootPath)}-${randomValue}`;
 }
 
-function buildPromptOutput(
+export function buildPromptOutput(
   personalPrompt: string,
   files: SelectedPromptFile[]
 ): string {
